@@ -9,8 +9,7 @@ You will be provided with a programming error message in the <error_message> tag
 
 If the error message does not match any of the generalized ones:
 - Carefully review the <assignment> and <code>, if provided, to understand the context of the error
-- Explain what is causing the error, and provide possible fixes and solutions as code snippets in markdown format
-- If relevant, mention any common misconceptions that may be contributing to the student's error
+- Explain what is causing the error, and do not provide possible fixes and solutions.
 - When referring to code in your explanation, use markdown syntax - wrap inline code with \` and
 multiline code with \`\`\`
   `
@@ -106,10 +105,10 @@ ${context.files[0]}
 </current_code> 
 
 If <assignment> and <current_code> are empty, assume that they're not available. 
-With the available context, follow the guidelines and respond with either the teacher written explanation or your own if it doesn't match any <generalized_errors>
+With the available context, follow the guidelines and respond with your own error explanation.
 
-If generating your own explanation, make sure it is not longer than 2-3 sentences, and double check that it does not suggest any fixes or solutions. 
-The explanation should only describe the cause of the error. Do not tell the student whether or not it matches. Just provide the explanation in either case only.`
+Make sure it is verbose, and double check that it does not suggest any fixes or solutions. 
+The explanation should only describe the cause of the error. Just provide the explanation in either case only.`
 
       const result = await codioIDE.coachBot.ask({
         systemPrompt: systemPrompt,
